@@ -30,9 +30,9 @@ RUN ln -s /etc/nginx/sites-available/wordpress /etc/nginx/sites-enabled/ && \
     # PHP-FPM, Nginx tarafından sağlanan URI'yi daha güvenli bir şekilde işlemesi için cgi.fix_pathinfo 0 değerine alıyoruz ve bu kodu >> /etc/php/7.4/fpm/php.ini bu komut sayesinde php.ini dosyasının en alt satırına ekliyoruz
 # WordPress dosyalarını indirip kuruyoruz
     wget https://wordpress.org/latest.tar.gz -P /tmp && \
-    tar -xvzf /tmp/latest.tar.gz -C /var/www/ && \ && \
+    tar -xvzf /tmp/latest.tar.gz -C /var/www/ && \
 # WordPress dizin ve dosya izinlerini ve sahipliğini ayarlıyoruz
-    chown -R www-data:www-data /var/www/wordpress && \ && \
+    chown -R www-data:www-data /var/www/wordpress && \
     find /var/www/wordpress -type d -exec chmod 755 {} \; && \
     find /var/www/wordpress -type f -exec chmod 644 {} \; && \
 # Başlangıç komut dosyasını çalıştırılabilir hale getiriyoruz
